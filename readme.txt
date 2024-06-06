@@ -1,0 +1,1 @@
+Los Sprites Usados de Kirby Super Star Ultra son propiedad de Nintendo
