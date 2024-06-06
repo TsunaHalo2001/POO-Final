@@ -70,24 +70,15 @@ def run_pygame():
         if score < 40:
             background_x[0] -= bgSpeed
 
-            if background_x[0] < -screen.get_width():
-                background_x[0] = screen.get_width()
-
             screen.blit(background[0], (int(background_x[0]), -screen.get_width()))
 
         elif score >= 40 and score < 80:
             background_x[1] -= bgSpeed
 
-            if background_x[1] < -screen.get_width():
-                background_x[1] = screen.get_width()
-
             screen.blit(background[1], (int(background_x[1]), -screen.get_width()))
 
         elif score >= 80 and score < 120:
             background_x[2] -= bgSpeed
-
-            if background_x[2] < -screen.get_width():
-                background_x[2] = screen.get_width()
 
             screen.blit(background[2], (int(background_x[2]), -twoThirdsScreen[1]))
 
@@ -108,8 +99,6 @@ def run_pygame():
         player1.oldPos = [player1.pos.x, player1.pos.y]
         keys = pygame.key.get_pressed()
         player1.move(dt, keys)
-
-        player1.checkMovement()
         # flip() the display to put your work on screen
         pygame.display.flip()
 

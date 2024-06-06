@@ -51,7 +51,6 @@ class Player:
         if keys[pygame.K_s]:
             self.pos.y += 300 * dt
 
-    def checkMovement(self):
         if self.pos.y > self.oldPos[1]:
             self.state = "down"
 
