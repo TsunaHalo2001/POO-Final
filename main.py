@@ -8,13 +8,11 @@ from game import *
 windowOpen = True
 
 btController = False
-btinput = "" 
+btinput = "0"
 
 def notification_handler(sender: int, data: bytearray):
     global btinput
 
-    print(f"Received data from {sender}: {data}")
-    print(data.decode())
     btinput = data.decode()
 
 async def main():

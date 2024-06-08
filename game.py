@@ -100,6 +100,9 @@ class Game(GameEntity):
                 pygame.mixer.music.load('bgm/00.mp3')
                 pygame.mixer.music.play(0)
                 self.musicFlag = False
+                for i in range(len(self.background_x)):
+                    self.background_x[i] = 0
+                self.background_x[4] = self.doubleScreen[0] + 1
             if btController:
                 self.screen.blit(self.background[6], (0, 0))
             if not btController:
@@ -321,7 +324,6 @@ class Game(GameEntity):
             if btinput == "":
                 self.keys = 0
             if not self.transitionFlag and not btinput == "":
-                print("btinput: ", btinput)
                 self.keys = int(btinput)
             if not self.transitionFlag:
                 self.player1.move(dt, self.keys)
