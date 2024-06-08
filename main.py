@@ -8,7 +8,7 @@ from game import *
 windowOpen = True
 
 btController = False
-btinput = ""
+btinput = "" 
 
 def notification_handler(sender: int, data: bytearray):
     global btinput

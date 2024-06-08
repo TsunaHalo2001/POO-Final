@@ -318,7 +318,10 @@ class Game(GameEntity):
                 self.deathFlag = True
                 self.enemies.clear()
         if self.state == 0:
-            if not self.transitionFlag:
+            if btinput == "":
+                self.keys = 0
+            if not self.transitionFlag and not btinput == "":
+                print("btinput: ", btinput)
                 self.keys = int(btinput)
             if not self.transitionFlag:
                 self.player1.move(dt, self.keys)
