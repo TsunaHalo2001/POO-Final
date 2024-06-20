@@ -26,7 +26,7 @@ class Game(GameEntity):
         self.exitTransition = False
 
         self.state = 1
-        self.score = 0
+        self.score = 119
 
         # Load the self.background image (replace 'self.background.jpg' with your image file)
         self.background = []

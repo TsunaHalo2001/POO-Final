@@ -13,6 +13,7 @@ btinput = "0"
 def notification_handler(sender: int, data: bytearray):
     global btinput
 
+    print(f"Received data from {sender}: {data}")
     btinput = data.decode()
 
 async def main():
